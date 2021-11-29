@@ -19,8 +19,11 @@ public class HomeController {
        //name that maps to a template
         List<LocationStats> allStats = cvds.getAllStats();
         int totalCases = allStats.stream().mapToInt(stat -> stat.getCases()).sum();
+        int totalCasesGap = allStats.stream().mapToInt(stat -> stat.getGap()).sum();
         model.addAttribute("locationStats", cvds.getAllStats());
         model.addAttribute("totalCases", totalCases);
+        model.addAttribute("totalCasesGap", totalCasesGap);
+
         return"home";
     }
 

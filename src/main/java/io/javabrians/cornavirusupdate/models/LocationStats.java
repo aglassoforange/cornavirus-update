@@ -5,6 +5,16 @@ public class LocationStats {
     private String state;
     private String country;
     private int cases;
+    //与昨天差值
+    private int gap;
+
+    public int getGap() {
+        return gap;
+    }
+
+    public void setGap(int gap) {
+        this.gap = gap;
+    }
 
     public String getState() {
         return state;
