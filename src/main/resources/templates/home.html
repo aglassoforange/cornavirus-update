@@ -82,19 +82,22 @@
 </section>
 
 
-<!--    <table>-->
-<!--        <tr>-->
-<!--            <th>state</th>-->
-<!--            <th>Country</th>-->
-<!--            <th>Total cases reported</th>-->
-<!--        </tr>-->
-<!--        <tr th:each="locationStat : ${locationStats}">-->
-<!--            <td th:text="${locationStat.state}"></td>-->
-<!--            <td th:text="${locationStat.country}"></td>-->
-<!--            <td th:text="${locationStat.cases}"></td>-->
-<!--        </tr>-->
-<!--    </table>-->
-
+<div class = "container">
+    <table>
+        <tr>
+            <th>state</th>
+            <th>Country</th>
+            <th>Total cases reported</th>
+            <th>Change compare yesterday</th>
+        </tr>
+        <tr th:each="locationStat : ${locationStats}">
+            <td th:text="${locationStat.state}"></td>
+            <td th:text="${locationStat.country}"></td>
+            <td th:text="${locationStat.cases}"></td>
+            <td th:text="${locationStat.getGap()}"></td>
+        </tr>
+    </table>
+</div>
 </section>
 
 
