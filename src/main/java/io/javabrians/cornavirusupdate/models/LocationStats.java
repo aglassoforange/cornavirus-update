@@ -16,6 +16,7 @@ public class LocationStats {
         this.gap = gap;
     }
 
+
     public String getState() {
         return state;
     }
