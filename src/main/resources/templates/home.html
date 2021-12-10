@@ -80,17 +80,17 @@
 </section>
 
 
-<div class = "container">
-    <table>
+<div class = "container mb-3 mt-3">
+    <table class = "table table-striped table-bordered myDataTable" style = "width: 100%"  >
         <tr>
             <th>Country</th>
-            <th>state</th>
+            <th>Place</th>
             <th>Total cases reported</th>
             <th>Change compare yesterday</th>
         </tr>
         <tr th:each="locationStat : ${locationStats}">
-            <td th:text="${locationStat.state}"></td>
             <td th:text="${locationStat.country}"></td>
+            <td th:text="${locationStat.state}"></td>
             <td th:text="${locationStat.cases}"></td>
             <td th:text="${locationStat.getGap()}"></td>
         </tr>
